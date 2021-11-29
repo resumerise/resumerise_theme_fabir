@@ -126,7 +126,7 @@ img {
 
 .section {
 	padding: 2rem 0 4rem;
-	counter-reset: section;
+	counter-reset: section-title;
 }
 
 .section__title {
@@ -137,12 +137,12 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: var(--mb-1-5);
-	counter-reset: section-title;
+	counter-increment: section-title;
 }
 
 .section__title::before {
-	content: counter(section) '. ';
-	counter-increment: section;
+	content: counter(section-title) '. ';
+	/* counter-increment: section-title; */
 }
 
 .section__title::after {
@@ -260,15 +260,6 @@ article {
 .references__description {
 	margin: 0;
 }
-
-/*========== AWARDS & PROFILE SECTION ==========*/
-
-
-/*========== PROJECTS SECTION ==========*/
-
-
-/*========== EDUCATION SECTION ==========*/
-
 
 /*========== FIXES SECTION ==========*/
 
