@@ -1,6 +1,6 @@
 <section id="project" class="project">
 	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
-		<header><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
+		<header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
 	<% } %>
 	<div class="article-container">
 		<% it.resume?.projects.forEach(function(project) { %>

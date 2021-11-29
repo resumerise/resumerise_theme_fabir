@@ -3,7 +3,7 @@
         picture: it.resume.basics.picture
     }) %>
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-        <header><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
+        <header class="section__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
     <% } %>
     <div class="article-container">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.basics}) %>

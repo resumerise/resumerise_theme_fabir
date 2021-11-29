@@ -1,8 +1,6 @@
 <section id="publications" class="publications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
-		<header>
-		    <%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %>
-		</header>
+		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></header>
 	<% } %>
     <div class="article-container">
         <% it.resume?.publications.forEach(function(publication) { %>
