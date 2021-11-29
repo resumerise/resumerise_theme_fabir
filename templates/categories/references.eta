@@ -1,4 +1,4 @@
-<section class="references section" id="references">
+<section class="references stion" id="references">
 	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
 		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
 	<% } %>

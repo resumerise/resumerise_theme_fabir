@@ -12,23 +12,25 @@
                         value: work.company,
                         classes: 'article__title'
                     }) %>
-                    <%~ include('key-value-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-                        value: work.position,
-                        classes: 'article__subtitle'
-                    }) %>
+                    <div class="article__wrapper">
+                        <%~ include('key-value-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                            value: work.position,
+                            classes: 'article__subtitle'
+                        }) %>
+                        <%~ include('date-range', {
+                            formatDate: it.formatDate,
+                            startDate: work.startDate,
+                            endDate: work.endDate,
+                            present: work.present,
+                            settings: it.resume.settings,
+                            classes: 'article__date'
+                        }) %>
+                    </div>
                     <%~ include('key-url-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
                         value: work.website,
                         classes: 'article__url'
-                    }) %>
-                    <%~ include('date-range', {
-                        formatDate: it.formatDate,
-                        startDate: work.startDate,
-                        endDate: work.endDate,
-                        present: work.present,
-                        settings: it.resume.settings,
-                        classes: 'article__date'
                     }) %>
                 </div>
                 <div class="article-content">
