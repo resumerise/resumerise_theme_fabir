@@ -1,8 +1,8 @@
-<section id="education" class="certifications">
+<section class="education section" id="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
 		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></header>
 	<% } %>
-	<div class="article-container">
+	<div class="article-container grid">
 		<% it.resume?.education.forEach(function(education) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
