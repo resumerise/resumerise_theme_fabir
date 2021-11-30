@@ -233,6 +233,11 @@ article {
 	margin: auto;
 	display: block;
 	margin-bottom: var(--mb-1);
+	border-radius: .1rem;
+	-webkit-border-radius: .1rem;
+	-moz-border-radius: .1rem;
+	-ms-border-radius: .1rem;
+	-o-border-radius: .1rem;
 }
 
 .home__title {
