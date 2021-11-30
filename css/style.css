@@ -87,7 +87,7 @@ body {
 	font-size: var(--normal-font-size);
 	color: var(--black-color);
 	font-family: var(--body-font);
-	counter-reset: title;
+	counter-reset: count;
 }
 
 h1, h2, h3, ul, p {
@@ -137,18 +137,18 @@ img {
 	text-align: center;
 	margin-bottom: var(--mb-1-5);
 	width: fit-content;
-	counter-increment: title;
+	counter-increment: count;
 }
 
-.section__title::before {
-	content: counter(title) '. ';
+section .section__title:before {
+	content: counter(count)'. ';
 }
 
-.section__title:nth-child(-n+9)::before {
-	content: '0'counter(title) '. ';
+section:nth-child(-n+9) .section__title:before {
+	content: '0'counter(count)'. ';
 }
 
-.section__title::after {
+.section__title:after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -176,6 +176,10 @@ img {
 	width: calc(100% - 3rem);
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
+}
+
+.container section {
+	flex: 50% 50%;
 }
 
 
@@ -339,3 +343,48 @@ article {
 
 /*========== MEDIA PRINT ==========*/
 @media print {}
+
+/*========== ICONS ==========*/
+
+.icon {
+	font-style: normal;
+	margin-right: 0;
+	width: 0.6em;
+	color: var(--icon-color);
+}
+
+.icon.twitter:before {
+	content: "\f099";
+}
+
+.icon.github:before {
+	content: "\f09b";
+}
+
+.icon.facebook:before {
+	content: "\f39e";
+}
+
+.icon.instagram:before {
+	content: "\f16d";
+}
+
+.icon.xing:before {
+	content: "\f168";
+}
+
+.icon.behance:before {
+	content: "\f39e";
+}
+
+.icon.dribbble:before {
+	content: "\f17d";
+}
+
+.icon.medium:before {
+	content: "\f23a";
+}
+
+.icon.linkedin:before {
+	content: "\f08c";
+}
