@@ -278,6 +278,21 @@ article {
 	margin: 0;
 }
 
+/*========== PROFILE SECTION ==========*/
+.profile__container {
+	display: flex;
+	column-gap: var(--mb-0-5);
+}
+
+.fab {
+	font-size: var(--mb-2);
+	padding: var(--mb-1);
+}
+
+.fab a {
+	color: var(--first-color);
+}
+
 /*========== FIXES SECTION ==========*/
 
 
