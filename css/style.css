@@ -193,7 +193,6 @@ img {
 	flex: 50% 50%;
 }
 
-
 .hide {
 	display: none !important;
 	user-select: none;
@@ -308,9 +307,6 @@ article {
 	color: var(--first-color);
 }
 
-/*========== FIXES SECTION ==========*/
-
-
 /*========== MEDIA QUERIES ==========*/
 @media screen and (max-width: 330px) {
 	.main {
@@ -374,7 +370,6 @@ article {
 }
 
 /*========== ICONS ==========*/
-
 .icon {
 	font-style: normal;
 	margin-right: 0;
