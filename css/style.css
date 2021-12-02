@@ -185,10 +185,6 @@ img {
 	margin-right: var(--mb-1-5);
 }
 
-.container section {
-	flex: 50% 50%;
-}
-
 .hide {
 	display: none !important;
 	user-select: none;
