@@ -155,10 +155,6 @@ img {
 	content: counter(count)'. ';
 }
 
-.section__title:nth-child(-n+9)::before {
-	content: '0'counter(count)'. ';
-}
-
 .section__title:after {
 	content: '';
 	position: absolute;
@@ -225,7 +221,7 @@ article {
 
 .article__date {
 	color: #ADACA7;
-	font-style: italic;
+	font-style: oblique;
 }
 
 .article__text {
