@@ -139,8 +139,7 @@ img {
 	padding: 2rem 0 4rem;
 }
 
-.section__title,
-.section__titlee {
+.section__title {
 	position: relative;
 	font-size: var(--h1-font-size);
 	font-family: var(--title-font);
@@ -152,8 +151,7 @@ img {
 	counter-increment: count;
 }
 
-.section__title::before,
-.section__titlee::before {
+.section__title::before {
 	content: counter(count)'. ';
 }
 
@@ -161,8 +159,7 @@ img {
 	content: '0'counter(count)'. ';
 }
 
-.section__title:after,
-.section__titlee:after {
+.section__title:after {
 	content: '';
 	position: absolute;
 	width: 100%;
