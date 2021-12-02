@@ -265,6 +265,14 @@ article {
 .home__mail a {
 	color: var(--first-color);
 }
+.home__url,
+.home__mail,
+.home__phone{
+	display: flex;
+	align-items: center;
+	column-gap: var(--mb-1);
+	margin: var(--mb-0-25) 0;
+}
 
 .home__title,
 .home__subtitle,
@@ -286,13 +294,13 @@ article {
 
 /*========== PROFILE SECTION ==========*/
 .profile__container {
-	display: flex;
-	column-gap: var(--mb-0-5);
+	display: inline-grid;
+    gap: var(--mb-2);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .fab {
 	font-size: var(--mb-1-5);
-	padding: var(--mb-1);
 }
 
 .fab a {
