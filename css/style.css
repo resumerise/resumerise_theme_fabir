@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -19,7 +24,12 @@
 	--black-color: black;
 
 	/*========== FONT & TYPORGRAPHY ==========*/
-	--body-font: 'Poppins', sans-serif;
+	/* --body-font: 'Poppins', sans-serif; */
+	/* --body-font: 'Roboto Mono', monospace; */
+	/* --body-font: 'Gideon Roman', cursive; */
+	/* --body-font: 'Lora', serif; */
+	--title-font: 'Poppins', sans-serif;
+	--body-font: 'PT Serif', serif;
 	--biggest-font-size: 4rem;
 	--bigger-font-size: 3rem;
 	--big-font-size: 2rem;
@@ -133,6 +143,7 @@ img {
 .section__titlee {
 	position: relative;
 	font-size: var(--h1-font-size);
+	font-family: var(--title-font);
 	color: var(--title-color);
 	font-weight: var(--font-600);
 	text-align: center;
@@ -275,6 +286,10 @@ article {
 .home__description {
 	text-align: center;
 }
+.home__title,
+.home__subtitle{
+	font-family: var(--title-font);
+}
 
 /*========== REFERENCE SECTION ==========*/
 .references__description {
@@ -288,7 +303,7 @@ article {
 }
 
 .fab {
-	font-size: var(--mb-2);
+	font-size: var(--mb-1-5);
 	padding: var(--mb-1);
 }
 
@@ -316,7 +331,8 @@ article {
 		margin: auto;
 	}
 
-	.main-wrapper {
+	.main-wrapper,
+	.basics {
 		display: grid;
 		grid-template-columns: 1fr .6fr;
 		column-gap: 5rem;
@@ -338,17 +354,18 @@ article {
 		text-align: initial;
 	}
 
-	.basics {
-		display: flex;
-		column-gap: 3rem;
-		align-items: center;
-		justify-content: center;
-	}
-
 	.profile__img {
 		order: 1;
-		height: 260px;
-	}
+		height: 300px;
+		width: 300px;
+		margin-right: 5rem;
+		margin-bottom: 0;
+		border-radius: .1rem;
+		-webkit-border-radius: .1rem;
+		-moz-border-radius: .1rem;
+		-ms-border-radius: .1rem;
+		-o-border-radius: .1rem;
+}
 
 	.home__title {
 		font-size: var(--h1-font-size);
