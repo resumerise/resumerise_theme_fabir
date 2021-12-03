@@ -207,7 +207,6 @@ article {
 .article__subtitle {
 	font-size: var(--h3-font-size);
 	font-weight: var(--font-500);
-	color: #ADACA7;
 }
 
 .article__description {
@@ -216,7 +215,6 @@ article {
 }
 
 .article__date {
-	color: #ADACA7;
 	font-style: oblique;
 }
 
@@ -262,7 +260,8 @@ article {
 	color: var(--black-color);
 }
 
-.home__mail a {
+.home__mail a,
+.home__url a {
 	color: var(--first-color);
 }
 .home__url,
@@ -270,15 +269,13 @@ article {
 .home__phone{
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	column-gap: var(--mb-1);
 	margin: var(--mb-0-25) 0;
 }
 
 .home__title,
 .home__subtitle,
-.home__url,
-.home__mail,
-.home__phone,
 .home__description {
 	text-align: center;
 }
@@ -331,22 +328,24 @@ article {
 		column-gap: 5rem;
 	}
 
-	.article__wrapper {
+	/* .article__wrapper {
+		color: #ADACA7;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
+	} */
 
 	.section__title,
 	.home__title,
 	.home__subtitle,
-	.home__url,
-	.home__mail,
-	.home__phone,
 	.home__description {
 		text-align: initial;
 	}
-
+	.home__url,
+	.home__mail,
+	.home__phone{
+		justify-content: initial;
+	}
 	.profile__img {
 		order: 1;
 		height: 300px;

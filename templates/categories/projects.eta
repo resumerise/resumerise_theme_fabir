@@ -12,21 +12,19 @@
 						value: project.title,
 						classes: 'article__title'
 					}) %>
-					<div class="article__wrapper">
-						<%~ include('key-value-item', {
-							label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
-							value: project.client,
-							classes: 'article__subtitle'
-						}) %>
-						<%~ include('date-range', {
-							formatDate: it.formatDate,
-							startDate: project.startDate,
-							endDate: project.endDate,
-							present: project.present,
-							settings: it.resume.settings,
-							classes: 'article__date'
-						}) %>
-					</div>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
+						value: project.client,
+						classes: 'article__subtitle'
+					}) %>
+					<%~ include('date-range', {
+						formatDate: it.formatDate,
+						startDate: project.startDate,
+						endDate: project.endDate,
+						present: project.present,
+						settings: it.resume.settings,
+						classes: 'article__date'
+					}) %>
 					<%~ include('key-url-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
 						value: project.website,
