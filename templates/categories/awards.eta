@@ -12,16 +12,18 @@
 						value: award.title,
 						classes: 'article__title'
 					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
-						value: award.awarder,
-						classes: 'article__subtitle'
-					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
-						value: it.formatDate(award.date, it.resume.settings),
-						classes: 'article__date'
-					}) %>
+					<div class="article__wrapper">
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
+							value: award.awarder,
+							classes: 'article__subtitle'
+						}) %>
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
+							value: it.formatDate(award.date, it.resume.settings),
+							classes: 'article__date'
+						}) %>
+					</div>
 				</div>
 				<div class="article-content">
 				<%~ include('key-value-item', {

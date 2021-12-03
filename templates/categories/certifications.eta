@@ -12,16 +12,18 @@
 						value: certificate.issuer,
 						classes: 'article__title'
 					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
-						value: certificate.title,
-						classes: 'article__subtitle'
-					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
-						value: it.formatDate(certificate.issueDate, it.resume.settings),
-						classes: 'article__date'
-					}) %>
+					<div class="article__wrapper">
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
+							value: certificate.title,
+							classes: 'article__subtitle'
+						}) %>
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
+							value: it.formatDate(certificate.issueDate, it.resume.settings),
+							classes: 'article__date'
+						}) %>
+					</div>
 				</div>
 			</article>
 		<% }) %>

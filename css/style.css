@@ -328,12 +328,12 @@ article {
 		column-gap: 5rem;
 	}
 
-	/* .article__wrapper {
+	.article__wrapper {
 		color: #ADACA7;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	} */
+	}
 
 	.section__title,
 	.home__title,
