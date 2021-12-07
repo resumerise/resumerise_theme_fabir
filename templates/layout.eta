@@ -37,19 +37,19 @@
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
-					
+
+					<!-- WORK -->	
+					<%~ include("work", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+
 					<!-- REFERENCE -->
 					<%~ include("reference", {
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
 
-					<!-- AWARDS -->
-					<%~ include("awards", {
-						resume: it.resume,
-						formatDate: it.formatDate
-					}) %>
-					
 					<!-- PROFILE -->
 					<%~ include("profile", {
 						resume: it.resume,
@@ -58,11 +58,6 @@
 
 				</div>
 				<div class="right">
-					<!-- WORK -->	
-					<%~ include("work", {
-						resume: it.resume,
-						formatDate: it.formatDate
-					}) %>
 					
 					<!-- PUBLICATION -->
 					<%~ include("publication", {
@@ -88,6 +83,12 @@
 						formatDate: it.formatDate
 					}) %>
 
+					<!-- AWARDS -->
+					<%~ include("awards", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
 					<!-- LANGUAGE -->
 					<%~ include("language", {
 						resume: it.resume,
