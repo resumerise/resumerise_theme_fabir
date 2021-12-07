@@ -31,12 +31,6 @@
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
-					
-					<!-- VOLUNTEER -->
-					<%~ include("volunteer", {
-						resume: it.resume,
-						formatDate: it.formatDate
-					}) %>
 
 					<!-- WORK -->	
 					<%~ include("work", {
@@ -50,6 +44,11 @@
 						formatDate: it.formatDate
 					}) %>
 
+					<!-- LANGUAGE -->
+					<%~ include("language", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
 				</div>
 				<div class="right">
 					
@@ -71,6 +70,12 @@
 						formatDate: it.formatDate
 					}) %>
 					
+					<!-- VOLUNTEER -->
+					<%~ include("volunteer", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
 					<!-- INTEREST -->
 					<%~ include("interest", {
 						resume: it.resume,
@@ -82,15 +87,9 @@
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
-					
+
 					<!-- REFERENCE -->
 					<%~ include("reference", {
-						resume: it.resume,
-						formatDate: it.formatDate
-					}) %>
-					
-					<!-- LANGUAGE -->
-					<%~ include("language", {
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
