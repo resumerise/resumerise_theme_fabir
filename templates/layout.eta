@@ -44,12 +44,6 @@
 						formatDate: it.formatDate
 					}) %>
 
-					<!-- REFERENCE -->
-					<%~ include("reference", {
-						resume: it.resume,
-						formatDate: it.formatDate
-					}) %>
-
 					<!-- PROFILE -->
 					<%~ include("profile", {
 						resume: it.resume,
@@ -85,6 +79,12 @@
 
 					<!-- AWARDS -->
 					<%~ include("awards", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+					<!-- REFERENCE -->
+					<%~ include("reference", {
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
