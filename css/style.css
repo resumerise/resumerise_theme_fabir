@@ -207,6 +207,7 @@ article {
 .article__subtitle {
 	font-size: var(--h3-font-size);
 	font-weight: var(--font-500);
+	color: #ADACA7 !important;
 }
 
 .article__description {
@@ -216,6 +217,7 @@ article {
 
 .article__date {
 	font-style: oblique;
+	color: #ADACA7 !important;
 }
 
 .article__text {
