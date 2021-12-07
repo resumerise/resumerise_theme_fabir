@@ -1,8 +1,8 @@
-<section id="certifications" class="certifications">
+<section class="certifications section" id="certifications">
 	<% if (it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle) { %>
-		<header><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></header>
+		<header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></header>
 	<% } %>
-	<div class="article-container">
+	<div class="article-container grid">
 		<% it.resume?.certifications.forEach(function(certificate) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.certificate, showDelete: true, id: certificate.id}) %>
@@ -12,16 +12,18 @@
 						value: certificate.issuer,
 						classes: 'article__title'
 					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
-						value: certificate.title,
-						classes: 'article__subtitle'
-					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
-						value: it.formatDate(certificate.issueDate, it.resume.settings),
-						classes: 'article__date'
-					}) %>
+					<div class="article__wrapper">
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
+							value: certificate.title,
+							classes: 'article__subtitle'
+						}) %>
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
+							value: it.formatDate(certificate.issueDate, it.resume.settings),
+							classes: 'article__date'
+						}) %>
+					</div>
 				</div>
 			</article>
 		<% }) %>
