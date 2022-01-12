@@ -1,13 +1,20 @@
 import { ResumeriseMeta } from "resumerise_library/mod.ts";
 
 export const meta = {
-  colors: ["#000", "#fff"],
-  description: "A starter template for resumerise.",
+  colors: ["#FF4D91", "#000", "#ADACA6"],
+  description:
+    "Fabir resume template is a clean, classic, magazine style resume suitable for any job seeker. Simplistic, clean lines and columns make this a great choice for the professional looking to get noticed.",
   name: "resumerise_theme_retro",
   platforms: ["DESKTOP", "INTERACTIVE", "MOBILE", "PRINT"],
-  tags: ["starter", "blueprint", "retro"],
-  categories: ["EDUCATION"],
-  styles: ["CLEAN", "MINIMAL"],
+  categories: [
+    "EDUCATION",
+    "BUSINESS",
+    "FASHION",
+    "FOOD",
+    "SEO",
+    "HIGH_SCHOOL",
+  ],
+  styles: ["CLEAN", "BORDER", "ELEGANT", "SIMPLE"],
   author: "resumerise",
   authorWebUrl: "http://resumerise.io",
 } as ResumeriseMeta;
