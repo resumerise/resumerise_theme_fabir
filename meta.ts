@@ -16,4 +16,5 @@ export const meta = {
   styles: ["CLEAN", "BORDER", "ELEGANT", "SIMPLE"],
   author: "resumerise",
   authorWebUrl: "http://resumerise.io",
+  subscription: "FREE"
 } as ResumeriseMeta;
