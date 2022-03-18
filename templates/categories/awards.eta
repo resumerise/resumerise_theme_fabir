@@ -1,4 +1,4 @@
-<section class="awards container section" id="awards">
+<section class="awards section" id="awards">
 	<% if(it.resume.settings?.labels?.categoryProperty?.award?.categoryTitle) { %>
 		<header><%= it.resume.settings.labels.categoryProperty.award.categoryTitle %></header>
 	<% } %>
@@ -7,11 +7,6 @@
 			<article class="grid">
 				<div>
 					<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
-						value: award.date,
-						classes: 'article__date no-flex'
-					}) %>
 
 					<div class="article-header">
 						<%~ include('key-value-item', {
@@ -19,11 +14,20 @@
 							value: award.title,
 							classes: 'article__title'
 						}) %>
-						<%~ include('key-value-item', {
-							label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
-							value: award.awarder,
-							classes: 'article__subtitle'
-						}) %>
+						
+						<div class="article__wrapper">
+							<%~ include('key-value-item', {
+								label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
+								value: award.awarder,
+								classes: 'article__subtitle'
+							}) %>
+							<%~ include('key-value-item', {
+								label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
+								value: award.date,
+								classes: 'article__date no-flex'
+							}) %>
+						</div>
+
 						<%~ include('key-url-item', {
 							label: it.resume.settings?.labels?.categoryProperty?.award?.website, 
 							value: award.website,

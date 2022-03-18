@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
-
-/*===== VARIABLES CSS =====*/
+/* ======================================== VARIABLES CSS ======================================== */
 :root {
-	/*========== COLORS ==========*/
+	/* ======================================== COLORS ======================================== */
 	/* --first-color: hsl(337, 62%, 58%); */
 	--first-color: hsl(337, 100%, 65%);
 	--first-color-second: hsl(337, 69%, 61%);
@@ -21,11 +18,7 @@
 	--white-color: white;
 	--black-color: black;
 
-	/*========== FONT & TYPORGRAPHY ==========*/
-	/* --body-font: 'Poppins', sans-serif; */
-	/* --body-font: 'Roboto Mono', monospace; */
-	/* --body-font: 'Gideon Roman', cursive; */
-	/* --body-font: 'Lora', serif; */
+	/* ======================================== FONT & TYPORGRAPHY ======================================== */
 	--title-font: 'Poppins', sans-serif;
 	--body-font: 'PT Serif', serif;
 	--biggest-font-size: 4rem;
@@ -38,33 +31,35 @@
 	--small-font-size: .813rem;
 	--smaller-font-size: .75rem;
 
-	/*========== FONT WEIGHT ==========*/
+	/* ======================================== FONT WEIGHT ======================================== */
 	--font-500: 500;
 	--font-600: 600;
 	--font-700: 700;
 	--font-800: 800;
 
-	/*========== MARGINS ==========*/
-	--mb-0-25: 0.25rem;
-	--mb-0-5: 0.5rem;
-	--mb-0-75: 0.75rem;
-	--mb-1: 1rem;
-	--mb-1-5: 1.5rem;
-	--mb-2: 2rem;
-	--mb-2-5: 2.5rem;
-	--mb-3: 3rem;
-
+	/* ======================================== MARGINS ======================================== */
 	/* Date range items gap */
 	--date-gap: 0.1em;
 
-	/*========== Z INDEX ==========*/
+	/* Vertical/Horiontal gap between articles */
+	--article-container-row-gap: 2em;
+
+	/*  Vertical gap between items withing article (content) */
+	--article-row-gap: 1em;
+
+	/* Skill rating bar height */
+	--skill-rating-height: .5em;
+
+	/* Skill container border color */
+	--skill-rating-border-radius: 5em;
+
+	/* ======================================== Z INDEX ======================================== */
 	--z-tooltip: 10;
 	--z-fixed: 100;
 	--z-modal: 1000;
 }
 
-/*========== FONT SIZE FOR LARGER SCREENS ==========*/
-
+/* ======================================== FONT SIZE FOR LARGER SCREENS ======================================== */
 @media screen and (min-width: 968px) {
 	:root {
 		--biggest-font-size: 5rem;
@@ -79,8 +74,7 @@
 	}
 }
 
-/*========== BASE ==========*/
-
+/* ======================================== BASE ======================================== */
 *, ::before, ::after {
 	margin: 0;
 	padding: 0;
@@ -106,12 +100,12 @@ body {
 }
 
 ::-moz-selection {
-	background: hsl(var(--hue-color), 50%, 80%);
+	background: hsl(337, 50%, 80%);
 	color: white;
 }
 
 ::selection {
-	background: hsl(var(--hue-color), 50%, 80%);
+	background: hsl(337, 50%, 80%);
 	color: white;
 }
 
@@ -128,7 +122,7 @@ h4 {
 	font-weight: var(--font-medium);
 	font-size: var(--h1-font-size);
 	color: var(--text-color-light);
-	margin: var(--mb-1-5) 0 0;
+	margin: 1.5rem 0 0;
 }
 
 ul {
@@ -137,11 +131,16 @@ ul {
 
 li {
 	list-style: circle;
-	margin-left: var(--mb-2);
+	margin-left: 2rem;
 }
 
 a {
 	text-decoration: none;
+	color: #ADACA7;
+}
+
+a:hover {
+	color: #7c706a;
 }
 
 img {
@@ -149,23 +148,7 @@ img {
 	height: auto;
 }
 
-.avoid-break-inside {
-	display: block !important;
-	/* never user flex with page-break */
-	-webkit-column-break-inside: avoid;
-	page-break-inside: avoid;
-	break-inside: avoid;
-}
-
-.avoid-break-inside-column {
-	display: block !important;
-	/* never user flex with page-break */
-	-webkit-column-break-inside: avoid-column;
-	page-break-inside: avoid-column;
-	break-inside: avoid-column;
-}
-
-/*========== CLASS CSS ==========*/
+/* ======================================== LAYOUT ======================================== */
 .section {
 	padding: 2rem 0 4rem;
 }
@@ -177,7 +160,7 @@ header {
 	color: var(--title-color);
 	font-weight: var(--font-600);
 	text-align: center;
-	margin-bottom: var(--mb-1-5);
+	margin-bottom: 1.5rem;
 	width: fit-content;
 	counter-increment: count;
 }
@@ -192,37 +175,41 @@ header::after {
 	width: 100%;
 	height: 1px;
 	border-radius: 1rem;
-	bottom: -.5rem;
+	bottom: -.3rem;
 	left: 0;
 	background-color: var(--first-color-alt);
 }
 
-/*========== LAYOUT ==========*/
 .main {
-	padding: var(--mb-1);
+	padding: 1rem;
 }
 
 .grid {
 	display: -ms-grid;
 	display: grid;
-	gap: var(--mb-1-5);
+	gap: 1.5rem;
 }
 
 .container {
-	/* max-width: 968px; */
 	max-width: 1024px;
 	width: calc(100% - 3rem);
-	margin-left: var(--mb-1-5);
-	margin-right: var(--mb-1-5);
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
 }
 
 article {
 	display: grid;
-	gap: var(--mb-0-5);
+	gap: .5rem;
 }
 
+/* ======================================== ARTICLE ======================================== */
 .article-container {
-	gap: var(--mb-2-5);
+	gap: var(--article-container-row-gap);
+}
+
+.with-header-date-logo,
+.with-header-date {
+	gap: var(--article-row-gap);
 }
 
 .article__title {
@@ -237,8 +224,8 @@ article {
 }
 
 .article__description {
-	margin-top: var(--mb-1);
-	margin-bottom: var(--mb-0-5);
+	margin-top: 1rem;
+	margin-bottom: .5rem;
 }
 
 .article__date {
@@ -259,6 +246,8 @@ article {
 	width: fit-content;
 	border-radius: 0.3em;
 	color: white;
+	font-family: var(--title-font);
+	font-style: normal;
 	background-color: var(--first-color-lighter-dark);
 	padding: .5em;
 }
@@ -274,14 +263,19 @@ article {
 }
 
 .article__list {
-	margin: var(--mb-0-5) 0;
+	margin: .5rem 0;
 }
 
-/*========== HOME SECTION ==========*/
+/* ======================================== HOME SECTION ======================================== */
+.basics header {
+	display: none;
+	user-select: none;
+}
+
 .profile__img {
 	margin: auto;
 	display: block;
-	margin-bottom: var(--mb-1);
+	margin-bottom: 1rem;
 	border-radius: .1rem;
 	-webkit-border-radius: .1rem;
 	-moz-border-radius: .1rem;
@@ -297,7 +291,7 @@ article {
 
 .home__subtitle {
 	font-weight: var(--font-500);
-	margin-bottom: var(--mb-0-5);
+	margin-bottom: .5rem;
 }
 
 .home__url a,
@@ -316,8 +310,8 @@ article {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	column-gap: var(--mb-1);
-	margin: var(--mb-0-25) 0;
+	column-gap: 1rem;
+	margin: .25rem 0;
 }
 
 .home__title,
@@ -331,19 +325,48 @@ article {
 	font-family: var(--title-font);
 }
 
-/*========== REFERENCE SECTION ==========*/
+/* ======================================== REFERENCE SECTION ======================================== */
 .references__description {
-	margin: 0;
+	margin-top: 0;
 }
 
-.skills .article-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-	row-gap: 2rem;
-	align-items: center;
+:is(.publications, .awards, .references) article,
+.project .with-header-date-logo {
+	gap: 0;
 }
 
-/*========== PROFILE SECTION ==========*/
+.skills__progress {
+	gap: .25rem;
+}
+
+.article__skills-title {
+	font-weight: var(--font-500);
+}
+
+.skill-rating {
+	-webkit-print-color-adjust: exact;
+	height: var(--skill-rating-height);
+	background: hsl(337, 100%, 87%);
+
+	overflow: hidden;
+	border-radius: var(--skill-rating-border-radius);
+	-moz-border-radius: var(--skill-rating-border-radius);
+	-webkit-border-radius: var(--skill-rating-border-radius);
+	-ms-border-radius: var(--skill-rating-border-radius);
+	-o-border-radius: var(--skill-rating-border-radius);
+}
+
+.skill-rating>div {
+	height: 100%;
+	border-radius: var(--skill-rating-border-radius);
+	background-color: var(--first-color-second);
+	-webkit-border-radius: var(--skill-rating-border-radius);
+	-moz-border-radius: var(--skill-rating-border-radius);
+	-ms-border-radius: var(--skill-rating-border-radius);
+	-o-border-radius: var(--skill-rating-border-radius);
+}
+
+/* ======================================== PROFILE SECTION ======================================== */
 .profiles .article-container {
 	flex-direction: row;
 	display: flex;
@@ -380,31 +403,14 @@ article {
 	background: hsl(337, 41%, 38%);
 }
 
-
-/*========== MEDIA QUERIES ==========*/
-@media screen {
-	.margin-box {
-		display: none;
-	}
-
-	body {
-		line-height: var(--layout-default-line-height);
-		margin: 0;
-	}
-
-	.article-container.two-column article {
-		margin-bottom: var(--article-row-gap);
-	}
-}
-
+/* ======================================== MEDIA QUERIES ======================================== */
 @media screen and (max-width: 330px) {
 	.main {
-		padding: var(--mb-1) 0;
+		padding: 1rem 0;
 	}
 
 	.container {
-		/* margin-left: var(--mb-1); */
-		margin-right: var(--mb-1);
+		margin-right: 1rem;
 	}
 }
 
@@ -424,12 +430,11 @@ article {
 	.main-wrapper,
 	.basics {
 		display: grid;
-		grid-template-columns: 1fr .6fr;
-		column-gap: 5rem;
+		grid-template-columns: 1fr .7fr;
+		column-gap: 3rem;
 	}
 
 	.article__wrapper {
-		color: #ADACA7;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -480,6 +485,9 @@ article {
 
 /*~~~~~~~~~~~~~ print ~~~~~~~~~~~~~*/
 @media print {
+	.main-wrapper {
+		grid-template-columns: 1fr;
+	}
 
 	.profiles,
 	.basics {
@@ -686,19 +694,12 @@ article {
 	.cover-page h1 {
 		font-size: var(--biggest-font-size);
 		font-family: var(--body-font);
+		line-height: 1.1;
 	}
 
 	.cover-page h3 {
 		margin: -.75rem 0 .5rem;
 		font-weight: var(--font-500);
-	}
-
-	.cover-page .cover-page__contact {
-		font-size: var(--normal-font-size);
-	}
-
-	.cover-page .picture {
-		text-align: center;
 	}
 
 	.cover-page__header {
@@ -709,19 +710,28 @@ article {
 		margin-top: 6rem;
 	}
 
-	.cover-page__header .picture img {
+	.cover-page__header .profile__img {
 		width: 10cm;
 		height: auto;
 		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
 	}
 
 	.cover-page__contact {
-		font-size: 10pt;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		column-gap: .4rem;
+	}
+
+	.cover-page__contact>* {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		gap: 0.7cm;
-		margin-top: 1rem;
+		align-items: baseline;
+
+		column-gap: .7rem;
+		font-size: var(--small-font-size);
 	}
 
 	.cover-page__social {
@@ -756,7 +766,7 @@ article {
 	}
 }
 
-/*======================================== INTERACTIVE ========================================*/
+/* ====================================================================== INTERACTIVE ====================================================================== */
 .INTERACTIVE .nav-add {
 	margin-top: 1em;
 	margin-bottom: 2em;
@@ -775,7 +785,7 @@ html:not(.INTERACTIVE) .profiles article .profile-item {
 	display: inline-block;
 }
 
-/*========== ICONS ==========*/
+/* ======================================== ICONS ======================================== */
 .icon {
 	font-style: normal;
 	margin-right: 0;

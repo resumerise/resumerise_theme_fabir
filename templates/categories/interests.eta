@@ -1,9 +1,9 @@
-<section class="interests container section" id="interests">
+<section class="interests section" id="interests">
 	<% if(it.resume.settings?.labels?.categoryProperty?.interest?.categoryTitle) { %>
 		<header><%= it.resume.settings.labels.categoryProperty.interest.categoryTitle %></header>
 	<% } %>
 
-	<div class="article-container">
+	<div class="article-container grid">
 		<% it.resume?.interests.forEach(function(interest) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.interest, showDelete: true, id: interest.id}) %>

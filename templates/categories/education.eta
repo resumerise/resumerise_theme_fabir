@@ -1,4 +1,4 @@
-<section class="education container section" id="education">
+<section class="education section" id="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
 		<header><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></header>
 	<% } %>
@@ -9,11 +9,6 @@
 				<div class="article-wrapper">
 					<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
 					<div class="article__date">
-						<%~ include('date-range', {
-							startDate: education.startDate,
-							endDate: education.endDate,
-							present: education.present,
-						}) %>
 						<%~ include('key-value-item', {
 							label: it.resume.settings?.labels?.durationLabel, 
 							value: education.durationLabel,
@@ -27,11 +22,20 @@
 							value: education.institution,
 							classes: 'article__title'
 						}) %>
-						<%~ include('key-value-item', {
-							label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
-							value: education.area,
-							classes: 'article__subtitle'
-						}) %>
+
+						<div class="article__wrapper">
+							<%~ include('key-value-item', {
+								label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
+								value: education.area,
+								classes: 'article__subtitle'
+							}) %>
+							<%~ include('date-range', {
+								startDate: education.startDate,
+								endDate: education.endDate,
+								present: education.present,
+								classes: 'article__date'
+							}) %>
+						</div>
 					</div>
 				</div>
 

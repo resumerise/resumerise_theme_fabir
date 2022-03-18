@@ -1,4 +1,4 @@
-<section class="references container section" id="references">
+<section class="references section" id="references">
 	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
 		<header><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
 	<% } %>
@@ -19,7 +19,7 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.reference?.reference, 
 						value: reference.reference,
-						classes: 'article__description'
+						classes: 'article__description references__description'
 					}) %>
 				</div>
 			</article>

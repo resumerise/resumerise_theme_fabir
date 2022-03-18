@@ -1,4 +1,4 @@
-<section class="volunteer container section" id="volunteer">
+<section class="volunteer section" id="volunteer">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
 		<header><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></header>
 	<% } %>
@@ -9,11 +9,6 @@
 				<div class="article-wrapper">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
 				<div class="article__date">
-					<%~ include('date-range', {
-						startDate: volunteer.startDate,
-						endDate: volunteer.endDate,
-						present: volunteer.present,
-					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.durationLabel, 
 						value: volunteer.durationLabel,
@@ -37,7 +32,6 @@
 							startDate: volunteer.startDate,
 							endDate: volunteer.endDate,
 							present: volunteer.present,
-							settings: it.resume.settings,
 							classes: 'article__date'
 						}) %>
 					</div>
