@@ -170,7 +170,7 @@ img {
 	padding: 2rem 0 4rem;
 }
 
-.section__title {
+header {
 	position: relative;
 	font-size: var(--h1-font-size);
 	font-family: var(--title-font);
@@ -182,11 +182,11 @@ img {
 	counter-increment: count;
 }
 
-.section__title::before {
+header::before {
 	content: counter(count)'. ';
 }
 
-.section__title:after {
+header::after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -214,11 +214,6 @@ img {
 	width: calc(100% - 3rem);
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
-}
-
-.hide {
-	display: none !important;
-	user-select: none;
 }
 
 article {
@@ -440,7 +435,7 @@ article {
 		justify-content: space-between;
 	}
 
-	.section__title,
+	header,
 	.home__title,
 	.home__subtitle,
 	.home__description {
@@ -485,6 +480,7 @@ article {
 
 /*~~~~~~~~~~~~~ print ~~~~~~~~~~~~~*/
 @media print {
+
 	.profiles,
 	.basics {
 		display: none;

@@ -13,7 +13,7 @@
 		<% } %>
 		
 		<style>
-			<%~ it.css %>
+			<%~ it.mainCss %>
 			<%~ it.widgetCss %>
 		</style>
 		
