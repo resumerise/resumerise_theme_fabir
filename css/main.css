@@ -39,7 +39,7 @@
 
 	/* ======================================== MARGINS ======================================== */
 	/* Date range items gap */
-	--date-gap: 0.1em;
+	--date-gap: .1em;
 
 	/* Vertical/Horiontal gap between articles */
 	--article-container-row-gap: 2em;
@@ -52,6 +52,9 @@
 
 	/* Skill container border color */
 	--skill-rating-border-radius: 5em;
+
+	/* Width of article logo */
+	--article-logo-img-width: 4em;
 
 	/* ======================================== Z INDEX ======================================== */
 	--z-tooltip: 10;
@@ -228,6 +231,10 @@ article {
 	margin-bottom: .5rem;
 }
 
+.article__img {
+	width: var(--article-logo-img-width);
+}
+
 .article__date {
 	font-style: oblique;
 	color: #ADACA7 !important;
@@ -244,7 +251,7 @@ article {
 	text-align: center;
 	font-size: var(--small-font-size);
 	width: fit-content;
-	border-radius: 0.3em;
+	border-radius: .3em;
 	color: white;
 	font-family: var(--title-font);
 	font-style: normal;
@@ -299,6 +306,10 @@ article {
 	color: var(--black-color);
 }
 
+.a-url {
+	font-size: var(--small-font-size);
+}
+
 .home__mail a,
 .home__url a {
 	color: var(--first-color);
@@ -328,6 +339,12 @@ article {
 /* ======================================== REFERENCE SECTION ======================================== */
 .references__description {
 	margin-top: 0;
+}
+
+.h-img {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 :is(.publications, .awards, .references) article,
@@ -412,6 +429,10 @@ article {
 	.container {
 		margin-right: 1rem;
 	}
+
+	.basics {
+		padding-top: 0;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -475,7 +496,7 @@ article {
 	}
 
 	.article__date {
-		gap: 0.5rem;
+		gap: .5rem;
 	}
 
 	.article__date .date {
@@ -566,7 +587,7 @@ article {
 
 	.toc-header {
 		margin-bottom: 1rem;
-		border-bottom: 0.375rem solid black;
+		border-bottom: .375rem solid black;
 	}
 
 	ol, ul {
@@ -578,11 +599,11 @@ article {
 	}
 
 	.toc-element-level-1 {
-		font-size: 0.5cm;
+		font-size: .5cm;
 	}
 
 	.toc-element-level-2 {
-		font-size: 0.4cm;
+		font-size: .4cm;
 	}
 
 	.toc-element-level-1 a, .toc-element-level-2 a {
@@ -600,10 +621,10 @@ article {
 	}
 
 	#list-toc-generated .toc-element-level-1 {
-		border-bottom: 0.0625rem solid black;
+		border-bottom: .0625rem solid black;
 		margin-top: 2rem;
 		margin-bottom: 1rem;
-		padding-bottom: 0.5rem;
+		padding-bottom: .5rem;
 		font-weight: bold;
 	}
 
@@ -657,7 +678,7 @@ article {
 	.cover-page .main-skills ul {
 		display: flex;
 		flex-direction: row;
-		gap: 0.5cm;
+		gap: .5cm;
 		margin: 0;
 		padding: 0;
 	}
@@ -713,9 +734,6 @@ article {
 	.cover-page__header .profile__img {
 		width: 10cm;
 		height: auto;
-		border-radius: 50%;
-		display: block;
-		margin: 0 auto;
 	}
 
 	.cover-page__contact {
@@ -747,7 +765,7 @@ article {
 
 	.cover-page__header .summary {
 		text-align: center;
-		margin-top: 0.5em;
+		margin-top: .5em;
 	}
 
 	/* availability */
@@ -790,7 +808,7 @@ html:not(.INTERACTIVE) .profiles article .profile-item {
 .icon {
 	font-style: normal;
 	margin-right: 0;
-	width: 0.6em;
+	width: .6em;
 	color: var(--icon-color);
 }
 

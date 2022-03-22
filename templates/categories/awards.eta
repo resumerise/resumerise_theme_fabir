@@ -36,7 +36,7 @@
 					</div>
 				</div>
 
-				<div class="article-content no-m">
+				<div class="article-content">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
 						value: award.summary,

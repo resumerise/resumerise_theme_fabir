@@ -53,6 +53,7 @@
 			<div class="main-wrapper">
 				<div class="left">
 					<!-- PROJECT -->
+					<div class="counter-reset"></div>
 					<%~ include("project", {
 						resume: it.resume
 					}) %>
@@ -67,18 +68,13 @@
 						resume: it.resume
 					}) %>
 
-					<!-- PROFILE -->
-					<%~ include("profile", {
-						resume: it.resume
-					}) %>
-
-					<!-- LANGUAGE -->
-					<%~ include("language", {
-						resume: it.resume
-					}) %>
-
 					<!-- REFERENCE -->
 					<%~ include("reference", {
+						resume: it.resume
+					}) %>
+
+					<!-- AWARDS -->
+					<%~ include("awards", {
 						resume: it.resume
 					}) %>
 				</div>
@@ -109,8 +105,13 @@
 						resume: it.resume
 					}) %>
 
-					<!-- AWARDS -->
-					<%~ include("awards", {
+					<!-- LANGUAGE -->
+					<%~ include("language", {
+						resume: it.resume
+					}) %>
+					
+					<!-- PROFILE -->
+					<%~ include("profile", {
 						resume: it.resume
 					}) %>
 				</div>
