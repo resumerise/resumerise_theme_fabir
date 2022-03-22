@@ -8,14 +8,7 @@
             <article class="with-header-date-logo grid">
                 <div class="article-wrapper">
                     <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
-                    <div class="article__date">
-                        <%~ include('key-value-item', {
-                            label: it.resume.settings?.labels?.durationLabel, 
-                            value: work.durationLabel,
-                            classes: 'article__text duration'
-                        }) %>
-                    </div>
-
+                    
                     <div class="article-header">
                         <div class="article__wrapper h-img">
                             <%~ include('key-value-item', {
@@ -44,6 +37,13 @@
                                 endDate: work.endDate,
                                 present: work.present,
                                 classes: 'article__date'
+                            }) %>
+                        </div>
+                        <div class="article__date f-e">
+                            <%~ include('key-value-item', {
+                                label: it.resume.settings?.labels?.durationLabel, 
+                                value: work.durationLabel,
+                                classes: 'article__text duration'
                             }) %>
                         </div>
                         

@@ -56,6 +56,9 @@
 	/* Width of article logo */
 	--article-logo-img-width: 4em;
 
+	/* Social icons gap */
+	--profiles-icon-gap: 2em;
+
 	/* ======================================== Z INDEX ======================================== */
 	--z-tooltip: 10;
 	--z-fixed: 100;
@@ -502,12 +505,20 @@ article {
 	.article__date .date {
 		flex-direction: column;
 	}
+
+	.f-e {
+		justify-content: flex-end;
+	}
 }
 
 /*~~~~~~~~~~~~~ print ~~~~~~~~~~~~~*/
 @media print {
 	.main-wrapper {
 		grid-template-columns: 1fr;
+	}
+
+	:is(.skills, .interests, .languages) .article-container {
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.profiles,
@@ -673,12 +684,13 @@ article {
 		align-items: center;
 		justify-content: center;
 		gap: 4mm;
+		margin-bottom: -2rem;
 	}
 
 	.cover-page .main-skills ul {
 		display: flex;
 		flex-direction: row;
-		gap: 0.5cm;
+		gap: .5cm;
 		margin: 0;
 		padding: 0;
 	}
@@ -713,9 +725,9 @@ article {
 	}
 
 	.cover-page h1 {
-		font-size: var(--biggest-font-size);
+		font-size: var(--bigger-font-size);
 		font-family: var(--body-font);
-		line-height: 1.1;
+		line-height: 1;
 	}
 
 	.cover-page h3 {
@@ -728,31 +740,32 @@ article {
 		flex-direction: column;
 		text-align: center;
 		gap: 3mm;
-		margin-top: 28rem;
+		margin-top: 19rem;
+		margin-bottom: -3rem;
 	}
 
 	.cover-page__header .profile__img {
 		width: 10cm;
 		height: auto;
 		position: absolute;
-		top: -4.5rem;
-		left: 17%;
+		top: -4.7rem;
+		left: 18%;
 	}
 
 	.cover-page__contact {
 		display: flex;
 		align-items: center;
 		flex-direction: row;
-		column-gap: .4rem;
+		column-gap: 1.2rem;
 		color: var(--black-color);
+		margin-bottom: -2rem;
 	}
 
 	.cover-page__contact>* {
 		display: flex;
 		flex-direction: row;
 		align-items: baseline;
-
-		column-gap: .7rem;
+		column-gap: .5rem;
 		font-size: var(--small-font-size);
 	}
 
