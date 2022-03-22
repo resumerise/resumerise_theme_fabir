@@ -678,7 +678,7 @@ article {
 	.cover-page .main-skills ul {
 		display: flex;
 		flex-direction: row;
-		gap: .5cm;
+		gap: 0.5cm;
 		margin: 0;
 		padding: 0;
 	}
@@ -728,12 +728,15 @@ article {
 		flex-direction: column;
 		text-align: center;
 		gap: 3mm;
-		margin-top: 6rem;
+		margin-top: 28rem;
 	}
 
 	.cover-page__header .profile__img {
 		width: 10cm;
 		height: auto;
+		position: absolute;
+		top: -4.5rem;
+		left: 17%;
 	}
 
 	.cover-page__contact {
