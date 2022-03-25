@@ -1,11 +1,14 @@
 <section class="volunteer section" id="volunteer">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></header>
+		<header><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></header>
 	<% } %>
+
 	<div class="article-container grid">
 		<% it.resume?.volunteer.forEach(function(volunteer) { %>
-			<article>
+			<article class="with-header-date grid">
+				<div class="article-wrapper">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
+				
 				<div class="article-header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.organization, 
@@ -22,16 +25,25 @@
 							startDate: volunteer.startDate,
 							endDate: volunteer.endDate,
 							present: volunteer.present,
-							settings: it.resume.settings,
 							classes: 'article__date'
 						}) %>
 					</div>
+
+					<div class="article__date f-e">
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.durationLabel, 
+							value: volunteer.durationLabel,
+							classes: 'article__text duration'
+						}) %>
+					</div>
+
 					<%~ include('key-url-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
 						value: volunteer.website,
 						classes: 'article__url'
 					}) %>
 				</div>
+
 				<div class="article-content">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.summary, 
@@ -47,6 +59,7 @@
 				</div>
 			</article>
 		<% }) %>
+		
 		<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer}) %>
 	</div>
 </section>
